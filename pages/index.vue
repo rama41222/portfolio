@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>fds</h1>
+    <h1 class="font-one">Rama</h1>
   </div>
 </template>
 
@@ -27,6 +27,6 @@
   }
 </script>
 
-<style>
+<style type="scss">
 
 </style>

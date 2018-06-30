@@ -1,0 +1,19 @@
+@import "variables";
+
+.home-background {
+  background-color: $very-dark-gray;
+}
+
+.font-one {
+  color: $light-gray;
+  font-family: $font-console;
+  font-size: 3em;
+  font-weight: 400;
+  letter-spacing: -1px;
+  line-height: 58px;
+  margin-bottom: 28px;
+  background: -webkit-linear-gradient($gre-blue-grad-1,$gre-blue-grad-2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
