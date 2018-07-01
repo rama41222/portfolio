@@ -15,7 +15,7 @@
 
       <b-container class="menu">
         <b-row>
-          <b-col sm="5">
+          <b-col sm="6">
           </b-col>
           <b-col>
             <div class="menu-item">works</div>
@@ -66,8 +66,7 @@
   }
 
   .menu {
-    top: calc(30% - 6em);
-    right:10vw;
+    top: calc(35% - 6em);
     position: absolute;
   }
 
@@ -78,5 +77,71 @@
     padding: 50px;
     box-shadow: 1px 2px 1px;
   }
+
+
+  /*
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+
+  @media (min-width: 990px) and (max-width: 1200px) {
+
+    .menu-item {
+      margin: 10px;
+      padding: 40px;
+    }
+
+    .menu {
+      top: calc(40% - 6em);
+    }
+
+
+  }
+
+  @media (min-width: 770px) and (max-width: 990px) {
+
+    .menu-item {
+      margin: 4px;
+      padding: 30px;
+    }
+
+    .menu {
+      top: calc(40% - 6em);
+    }
+
+  }
+  /*
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+
+  @media (min-width: 0px) and (max-width: 770px){
+
+    .menu {
+      top: calc(80% - 6em);
+    }
+
+  }
+
+  /*
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+
+  @media (min-width: 481px) and (max-width: 767px) {
+
+
+  }
+
+  /*
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+
+  @media (min-width: 320px) and (max-width: 480px) {
+
+
+  }
+
 
 </style>
