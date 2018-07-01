@@ -6,14 +6,64 @@
 
 .font-one {
   color: $light-gray;
-  font-family: $font-console;
-  font-size: 3em;
+  font-family: $font-console-2;
+  font-size: $hello-font-size;
   font-weight: 400;
-  letter-spacing: -1px;
-  line-height: 58px;
-  margin-bottom: 28px;
-  background: -webkit-linear-gradient($gre-blue-grad-1,$gre-blue-grad-2);
+  background: $very-dark-gray;
+  letter-spacing: .15em;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin: 0px;
 }
 
+.font-two {
+  color: $light-gray;
+  font-family: $font-console-2;
+  font-size: $hello-font-size-2;
+  margin: 0px!important;
+  font-weight: 200;
+  letter-spacing: .15em;
+  background: $very-dark-gray;
+  border-right: .15em solid orange;
+  white-space: nowrap;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation:
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
+
+.font-three {
+  color: $light-gray;
+  font-family: $font-console-2;
+  font-size: $hello-font-size-3;
+  font-weight: 200;
+  letter-spacing: .15em;
+  background: $very-dark-gray;
+  white-space: nowrap;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation-delay: 5s !important;
+  opacity: 0;
+  animation:
+    shifting 5s normal forwards;
+}
+
+@keyframes shifting {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
