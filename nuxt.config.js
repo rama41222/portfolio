@@ -22,6 +22,7 @@ module.exports = {
     'nuxt-sass-resources-loader',
     'bootstrap-vue/nuxt',
     '@nuxtjs/toast',
+    '@nuxtjs/pwa'
   ],
   toast: {
     position: 'top-right',
