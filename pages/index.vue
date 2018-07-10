@@ -8,31 +8,27 @@
               <div>
                 <div class="typewriter">
                   <div>
-                    <label class="font-one">HELLO</label>
+                    <label class="font-one">{{generalInfo.title}}</label>
                   </div>
                 </div>
               </div>
               <div>
                 <div class="name-wrap">
-                  <p class="font-two" style="max-width: 100%">I'M Dinushanka</p>
+                  <p class="font-two" style="max-width: 100%">{{generalInfo.name}}</p>
                 </div>
               </div>
               <div>
                 <div class="">
-                  <p class="font-three">a FullStack Engineer</p>
+                  <p class="font-three">{{generalInfo.who}}</p>
                 </div>
               </div>
             </div>
             <div class="social">
-              <div><a href="https://www.facebook.com/rama41222" target="_blank"><i class="fab fa-facebook-f"></i></a></div>
-              <div><a href="https://medium.com/@rama41222" target="_blank"><i class="fab fa-medium-m"></i></a></div>
-              <div><a href="https://rama41222.blogspot.com/" target="_blank"><i class="fab fa-blogger-b"></i></a></div>
-              <div><a href="https://www.linkedin.com/in/dinushanka" target="_blank"><i class="fab fa-linkedin-in"></i></a></div>
-              <div><a href="https://github.com/rama41222" target="_blank"><i class="fab fa-github"></i></a></div>
-              <div><a href="mailto:dinushankanrg@gmail.com?Subject=Hello%20Rama" target="_top"><i
-                class="far fa-envelope-open"></i></a></div>
-              <div><a href="https://twitter.com/dnrg41222" target="_blank"><i class="fab fa-twitter"></i></a></div>
-              <div><a href="https://www.instagram.com/rama41222" target="_blank"><i class="fab fa-instagram"></i></a></div>
+              <div v-for="(link, index) of socialLinks" :key="index">
+                <a  :rel="link.rel" :href="link.route" :target="link.target">
+                  <i :class="link.class"></i>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -65,14 +61,21 @@
 
 <script>
 
+  import { mapGetters } from 'vuex'
   export default {
     components: {},
-    computed: {},
+    computed: {
+      ...mapGetters({
+        socialLinks: 'getSocialLinks',
+        generalInfo: 'getGeneralInfo'
+      })
+    },
     mounted() {
 
     },
     data() {
-      return {}
+      return {
+      }
     },
     methods: {}
   }
@@ -98,16 +101,10 @@
 
   .nested {
     display: grid;
-    grid-template-rows:3fr 3fr 3fr;
+    grid-template-rows:3fr 3fr;
     grid-row-gap: 2em;
   }
 
-  .nested-1 {
-    display: grid;
-    grid-template-rows:2fr 2fr;
-    grid-template-columns:1fr;
-    grid-gap: 1em;
-  }
 
   .short-title {
     display: grid;
@@ -185,7 +182,7 @@
 
     .nested {
       grid-row-gap: 2em;
-      grid-template-rows:3fr 2fr 2fr;
+      grid-template-rows:3fr 3fr;
 
     }
     .short-title {
