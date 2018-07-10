@@ -157,6 +157,50 @@
     text-align: center;
   }
 
+  .facebook {
+    color:#3b5998;
+    font-size: 1.3em;
+  }
+
+  .twitter {
+    color: #1da1f2;
+    font-size: 1.3em;
+
+  }
+
+  .ig {
+    color: #c32aa3;
+    font-size: 1.3em;
+
+  }
+
+  .linkedin {
+    color:#007bb5;
+    font-size: 1.3em;
+
+  }
+
+  .mail {
+    color: #db4437;
+    font-size: 1.3em;
+
+  }
+
+  .medium {
+    color: #12100e;
+    font-size: 1.3em;
+  }
+
+  .git {
+    color: #1c1c1c;
+    font-size: 1.3em;
+
+  }
+
+  .blogger {
+    color: #f57d00;
+    font-size: 1.3em;
+  }
 
   @media(min-width: 700px) {
     .wrapper {
