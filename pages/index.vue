@@ -33,26 +33,10 @@
           </div>
         </div>
         <div class="works">
-          <div class="menu-item">works</div>
-          <div class="menu-item">works</div>
-          <div class="menu-item">works</div>
-          <div class="menu-item">works</div>
-          <div class="menu-item">works</div>
-          <div class="menu-item">works</div>
-          <div class="menu-item">works</div>
-          <div class="menu-item">works</div>
-          <div class="menu-item">works</div>
-          <div class="menu-item">works</div>
-          <div class="menu-item">works</div>
-          <div class="menu-item">works</div>
-          <div class="menu-item">works</div>
-          <div class="menu-item">works</div>
-          <div class="menu-item">works</div>
-          <div class="menu-item">works</div>
-          <div class="menu-item">works</div>
-          <div class="menu-item">works</div>
-          <div class="menu-item">works</div>
-          <div class="menu-item">works</div>
+          <div class="menu-item" v-for="(project, index) in projects" :key="index"><img :src="project.image"
+                                                                                        :class="project.class"/>
+          </div>
+
         </div>
       </div>
     </div>
@@ -61,7 +45,8 @@
 
 <script>
 
-  import { mapGetters } from 'vuex'
+  import {mapGetters} from 'vuex'
+
   export default {
     components: {},
     computed: {
@@ -124,8 +109,14 @@
     margin: 10px;
     border: 2px solid;
     background-color: rgba(185, 183, 183, 0.14);
-    padding: 50px;
     box-shadow: 1px 2px 1px;
+    overflow: hidden;
+  }
+
+  .img-project {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
   }
 
   .intro {
@@ -234,6 +225,10 @@
     .short-title {
       justify-items: start;
 
+    }
+
+    .works {
+      text-align: left;
     }
 
   }

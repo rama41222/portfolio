@@ -16,17 +16,27 @@ const state = () => ({
     who:'a FullStack Engineer'
   },
   projects: [
-    { name:'', description: '', url:'', image:''},
-    { name:'', description: '', url:'', image:''},
-    { name:'', description: '', url:'', image:''},
-    { name:'', description: '', url:'', image:''},
-    { name:'', description: '', url:'', image:''},
-    { name:'', description: '', url:'', image:''},
-    { name:'', description: '', url:'', image:''},
-    { name:'', description: '', url:'', image:''},
-    { name:'', description: '', url:'', image:''},
-    { name:'', description: '', url:'', image:''},
-    { name:'', description: '', url:'', image:''}
+    { id: 1,name:'', description: '', url:'', image:'https://www.dialog.lk/dialogdocroot/content/images/page-banners/landing-page/mega-run-banner.jpg', class:'img-project'},
+    { id: 2,name:'', description: '', url:'', image:'https://www.dialog.lk/dialogdocroot/content/images/page-banners/landing-page/mega-run-banner.jpg', class:'img-project'},
+    { id: 3,name:'', description: '', url:'', image:'https://www.dialog.lk/dialogdocroot/content/images/page-banners/landing-page/mega-run-banner.jpg', class:'img-project'},
+    { id: 4,name:'', description: '', url:'', image:'https://www.dialog.lk/dialogdocroot/content/images/page-banners/landing-page/mega-run-banner.jpg', class:'img-project'},
+    { id: 5,name:'', description: '', url:'', image:'https://www.dialog.lk/dialogdocroot/content/images/page-banners/landing-page/mega-run-banner.jpg', class:'img-project'},
+    { id: 6,name:'', description: '', url:'', image:'https://www.dialog.lk/dialogdocroot/content/images/page-banners/landing-page/mega-run-banner.jpg', class:'img-project'},
+    { id: 7,name:'', description: '', url:'', image:'https://www.dialog.lk/dialogdocroot/content/images/page-banners/landing-page/mega-run-banner.jpg', class:'img-project'},
+    { id: 8,name:'', description: '', url:'', image:'https://www.dialog.lk/dialogdocroot/content/images/page-banners/landing-page/mega-run-banner.jpg', class:'img-project'},
+    { id: 9,name:'', description: '', url:'', image:'https://www.dialog.lk/dialogdocroot/content/images/page-banners/landing-page/mega-run-banner.jpg', class:'img-project'},
+    { id: 10,name:'', description: '', url:'', image:'https://www.dialog.lk/dialogdocroot/content/images/page-banners/landing-page/mega-run-banner.jpg', class:'img-project'},
+    { id: 11,name:'', description: '', url:'', image:'https://www.dialog.lk/dialogdocroot/content/images/page-banners/landing-page/mega-run-banner.jpg', class:'img-project'},
+    { id: 11,name:'', description: '', url:'', image:'https://www.dialog.lk/dialogdocroot/content/images/page-banners/landing-page/mega-run-banner.jpg', class:'img-project'},
+    { id: 11,name:'', description: '', url:'', image:'https://www.dialog.lk/dialogdocroot/content/images/page-banners/landing-page/mega-run-banner.jpg', class:'img-project'},
+    { id: 11,name:'', description: '', url:'', image:'https://www.dialog.lk/dialogdocroot/content/images/page-banners/landing-page/mega-run-banner.jpg', class:'img-project'},
+    { id: 11,name:'', description: '', url:'', image:'https://www.dialog.lk/dialogdocroot/content/images/page-banners/landing-page/mega-run-banner.jpg', class:'img-project'},
+    { id: 11,name:'', description: '', url:'', image:'https://www.dialog.lk/dialogdocroot/content/images/page-banners/landing-page/mega-run-banner.jpg', class:'img-project'},
+    { id: 11,name:'', description: '', url:'', image:'https://www.dialog.lk/dialogdocroot/content/images/page-banners/landing-page/mega-run-banner.jpg', class:'img-project'},
+    { id: 11,name:'', description: '', url:'', image:'https://www.dialog.lk/dialogdocroot/content/images/page-banners/landing-page/mega-run-banner.jpg', class:'img-project'},
+    { id: 11,name:'', description: '', url:'', image:'https://www.dialog.lk/dialogdocroot/content/images/page-banners/landing-page/mega-run-banner.jpg', class:'img-project'},
+    { id: 11,name:'', description: '', url:'', image:'https://www.dialog.lk/dialogdocroot/content/images/page-banners/landing-page/mega-run-banner.jpg', class:'img-project'},
+    { id: 11,name:'', description: '', url:'', image:'https://www.dialog.lk/dialogdocroot/content/images/page-banners/landing-page/mega-run-banner.jpg', class:'img-project'},
   ]
   
 })
