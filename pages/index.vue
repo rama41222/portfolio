@@ -8,18 +8,18 @@
               <div>
                 <div class="typewriter">
                   <div>
-                    <label class="font-one">{{generalInfo.title}}</label>
+                    <label class="font-one">{{prof.title}}</label>
                   </div>
                 </div>
               </div>
               <div>
                 <div class="name-wrap">
-                  <p class="font-two" style="max-width: 100%">{{generalInfo.name}}</p>
+                  <p class="font-two" style="max-width: 100%">{{prof.name}}</p>
                 </div>
               </div>
               <div>
                 <div class="">
-                  <p class="font-three">{{generalInfo.who}}</p>
+                  <p class="font-three">{{prof.who}}</p>
                 </div>
               </div>
             </div>
@@ -67,7 +67,8 @@
     computed: {
       ...mapGetters({
         socialLinks: 'getSocialLinks',
-        generalInfo: 'getGeneralInfo'
+        prof: 'getGeneralInfo',
+        projects:'getProjects'
       })
     },
     mounted() {
@@ -75,6 +76,7 @@
     },
     data() {
       return {
+        date: new Date()
       }
     },
     methods: {}

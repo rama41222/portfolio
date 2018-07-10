@@ -26,9 +26,7 @@ const state = () => ({
     { name:'', description: '', url:'', image:''},
     { name:'', description: '', url:'', image:''},
     { name:'', description: '', url:'', image:''},
-    { name:'', description: '', url:'', image:''},
-
-
+    { name:'', description: '', url:'', image:''}
   ]
   
 })
@@ -38,7 +36,7 @@ const getters = {
     return state.socialLinks
   },
   getGeneralInfo: state => {
-    return state.socialLinks
+    return state.generalInfo
   },
   getProjects: state => {
     return state.projects
