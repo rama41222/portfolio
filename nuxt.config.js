@@ -5,9 +5,13 @@ module.exports = {
   head: {
     title: 'Rama\'s Personal Space',
     meta: [
-      {charset: 'utf-8'},
-      {name: 'viewport', content: 'width=device-width, initial-scale=1'},
-      {hid: 'description', name: 'description', content: 'Rama&apos;s Personal Space'}
+      { charset: 'utf-8'},
+      { name: 'viewport', content: 'width=device-width, initial-scale=1'},
+      { name:'keywords', content:'Rama\s Personal Space, Dinushanka, Ramawickrama, Rama41222, rama41222'},
+      { hid: 'description', name: 'description', content: 'Rama&apos;s Personal Space'},
+      { name:'author', content:'Rama41222'},
+      { name:'apple-mobile-web-app-capable', content:'yes'},
+
     ],
     link: [
       {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'},
@@ -38,6 +42,40 @@ module.exports = {
   ],
   loading: {color: '#3B8070'},
   plugins: ['~plugins/vee.js', '~plugins/spinner.js'],
+  manifest: {
+    name: "Rama's Personal Space",
+    short_name: "Rama",
+    theme_color: "#ffffff",
+    background_color: "#ffffff",
+    display: "fullscreen",
+    Scope: ".",
+    start_url: "/",
+    lang: "en"
+  },
+  workbox: {
+    runtimeCaching: [
+      {
+        urlPattern: 'https://fonts.googleapis.com/.*',
+        handler: 'cacheFirst',
+        method: 'GET',
+        strategyOptions: {cacheableResponse: {statuses: [0, 200]}}
+      },
+      {
+        urlPattern: 'https://cdn.linearicons.com/.*',
+        handler: 'cacheFirst',
+        method: 'GET',
+        strategyOptions: {cacheableResponse: {statuses: [0, 200]}}
+        
+      },
+      {
+        urlPattern: 'https://use.fontawesome.com/.*',
+        handler: 'cacheFirst',
+        method: 'GET',
+        strategyOptions: {cacheableResponse: {statuses: [0, 200]}}
+        
+      }
+    ]
+  },
   build: {
     vendor: ['vee-validate'],
     extend(config, {isDev, isClient, isServer}) {
