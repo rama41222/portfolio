@@ -25,7 +25,7 @@
             </div>
             <div class="social">
               <div v-for="(link, index) of socialLinks" :key="index">
-                <a  :rel="link.rel" :href="link.route" :target="link.target">
+                <a  :rel="link.rel" :href="link.route" :target="link.target" :id="index" :title="link.title">
                   <i :class="link.class" :aria-labelledby="link.label" :area-label="link.label"></i>
                 </a>
               </div>
@@ -33,7 +33,9 @@
           </div>
         </div>
         <div class="works">
-          <div class="menu-item" v-for="(project, index) in projects" :key="index"><img :src="project.image"
+          <div class="menu-item" @click="showModal=true; selectedProject=project" v-for="(project, index) in projects"
+               :key="index"><img
+            :src="project.image"
                                                                                         :class="project.class"
                                                                                         :alt="project.alt"/>
           </div>
@@ -41,26 +43,38 @@
         </div>
       </div>
     </div>
+
+    <b-modal v-model="showModal" size="lg" hide-footer :title="selectedProject.name">
+        <project-modal-body :toggleModal="toggleModal" :project="selectedProject"></project-modal-body>
+    </b-modal>
   </div>
 </template>
 
 <script>
 
   import {mapGetters} from 'vuex'
+  import ProjectModalBody from './../components/ProjectModalBody'
 
   export default {
     components: {
+      ProjectModalBody
     },
     computed: {
       ...mapGetters({
         socialLinks: 'getSocialLinks',
         prof: 'getGeneralInfo',
-        projects:'getProjects',
+        projects:'getProjects'
       })
     },
     data() {
       return {
-        online: true
+        showModal: false,
+        selectedProject: ''
+      }
+    },
+    methods: {
+      toggleModal(){
+        this.showModal = !this.showModal
       }
     }
   }
