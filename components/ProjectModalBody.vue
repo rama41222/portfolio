@@ -15,9 +15,9 @@
         </div>
       </div>
       <div class="nested-wrapper">
-        <div><b>Language: &nbsp;</b>{{project.name}}</div>
-        <div><b>Contribution: &nbsp;</b>{{project.contrib}}</div>
-        <div><b>Description: &nbsp;</b>{{project.description}}</div>
+        <div><b>Language: &nbsp;</b><br/>{{project.name}}</div>
+        <div><b>Contribution: &nbsp;</b><br/>{{project.contrib}}</div>
+        <div><b>Description: &nbsp;</b><br/>{{project.description}}</div>
         <div><b>Link: &nbsp;</b><a :href="project.url" :alt="project.alt">Try</a></div>
       </div>
     </div>
@@ -74,6 +74,7 @@
     /*background-color: #8fa6ff;*/
     overflow: hidden;
     overflow-wrap: break-word;
+    text-align: justify;
   }
 
   .nested-wrapper-sm {
