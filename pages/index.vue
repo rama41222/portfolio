@@ -124,17 +124,20 @@
 
   .menu-item {
     display: inline-block;
-    margin: 10px;
-    border: 2px solid;
-    background-color: rgba(185, 183, 183, 0.14);
-    box-shadow: 1px 2px 1px;
+    margin: 8px;
+    background-color: rgba(185, 183, 183, 0.2);
     overflow: hidden;
+    border-radius: 1.5em;
   }
 
   .img-project {
-    width: 100px;
-    height: 100px;
+    width: 130px;
+    height: 130px;
     object-fit: cover;
+    padding: 1em;
+    object-position: center;
+    border-radius: 2em;
+    cursor: pointer;
   }
 
   .intro {
@@ -223,7 +226,7 @@
     }
 
     .works {
-      text-align: left;
+      text-align: center;
     }
 
     .img-project {
