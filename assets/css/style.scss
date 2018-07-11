@@ -11,10 +11,6 @@
   padding: 1em !important;
 }
 
-.home-background {
-  //background-color: $very-dark-gray;
-}
-
 .font-one {
   color: $light-gray;
   font-family: $font-console-2;
@@ -65,7 +61,6 @@
   background: $very-dark-gray;
   white-space: nowrap;
   -webkit-background-clip: text;
-  //-webkit-text-fill-color: transparent;
   opacity: 0;
   animation:
     shifting 5s normal forwards;
