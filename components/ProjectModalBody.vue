@@ -6,7 +6,7 @@
           <img class="img-modal-project" :src="project.image" :alt="project.alt"/>
         </div>
         <div>
-          <p><b>Language: &nbsp;</b> {{project.tech}}</p>
+          <p><b>Tech: &nbsp;</b> {{project.tech}}</p>
         </div>
         <div>
           <p><b>Duration:&nbsp;</b>
@@ -18,7 +18,7 @@
         <div><b>Language: &nbsp;</b><br/>{{project.name}}</div>
         <div><b>Contribution: &nbsp;</b><br/>{{project.contrib}}</div>
         <div><b>Description: &nbsp;</b><br/>{{project.description}}</div>
-        <div><b>Link: &nbsp;</b><a :href="project.url" :alt="project.alt">Try</a></div>
+        <div><b>Link: &nbsp;</b><a :href="project.url" :alt="project.alt" target="_blank">Try</a></div>
       </div>
     </div>
     <div align="right">
@@ -97,11 +97,15 @@
   @media (min-width: 995px) {
     .body-wrapper {
       grid-template-rows: 1fr;
-      grid-template-columns: 3fr 9fr;
+      grid-template-columns: 4fr 9fr;
     }
 
     .nested-wrapper-sm {
-      grid-template-rows: 4fr 3fr 3fr;
+      grid-gap: 0.8em;
+
+    }
+    .nested-wrapper {
+      grid-gap: 1em;
     }
 
   }
