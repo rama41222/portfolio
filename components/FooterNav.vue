@@ -27,7 +27,7 @@
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
-    background-color: #f3f1f1;
+    background-color: rgba(251, 249, 249, 0.6);
     grid-gap: 1em;
     position: fixed;
     bottom: 0;

@@ -41,12 +41,12 @@ module.exports = {
     'assets/css/variables.scss'
   ],
   loading: {color: '#3B8070'},
-  plugins: ['~plugins/vee.js', '~plugins/spinner.js'],
+  plugins: ['~plugins/vee.js', '~plugins/spinner.js', {src:'~plugins/online.js', ssr: false }],
   manifest: {
     name: "Rama's Personal Space",
     short_name: "Rama",
-    theme_color: "#ffffff",
-    background_color: "#ffffff",
+    theme_color: "#fbfbfb",
+    background_color: "#fcfcfc",
     display: "fullscreen",
     Scope: ".",
     start_url: "/",

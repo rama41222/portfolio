@@ -1,8 +1,5 @@
 <template>
   <div class="no-gutters container-wrap">
-    <div :class="['network',online ? 'online' : 'offline']">
-      <div v-if="!online" class="circle"></div>
-    </div>
     <div class="menu">
       <div class="wrapper">
         <div class="left-wrap">
@@ -29,7 +26,7 @@
             <div class="social">
               <div v-for="(link, index) of socialLinks" :key="index">
                 <a  :rel="link.rel" :href="link.route" :target="link.target">
-                  <i :class="link.class"></i>
+                  <i :class="link.class" :aria-labelledby="link.label" :area-label="link.label"></i>
                 </a>
               </div>
             </div>
@@ -37,7 +34,8 @@
         </div>
         <div class="works">
           <div class="menu-item" v-for="(project, index) in projects" :key="index"><img :src="project.image"
-                                                                                        :class="project.class"/>
+                                                                                        :class="project.class"
+                                                                                        :alt="project.alt"/>
           </div>
 
         </div>
@@ -57,31 +55,13 @@
       ...mapGetters({
         socialLinks: 'getSocialLinks',
         prof: 'getGeneralInfo',
-        projects:'getProjects'
+        projects:'getProjects',
       })
-    },
-    mounted () {
-      if (!window.navigator) {
-        this.online = false
-        return
-      }
-      this.online = Boolean(window.navigator.onLine)
-      window.addEventListener('offline', this._toggleNetworkStatus)
-      window.addEventListener('online', this._toggleNetworkStatus)
     },
     data() {
       return {
         online: true
       }
-    },
-    methods: {
-      _toggleNetworkStatus ({ type }) {
-        this.online = type === 'online'
-      }
-    },
-    destroyed () {
-      window.removeEventListener('offline', this._toggleNetworkStatus)
-      window.removeEventListener('online', this._toggleNetworkStatus)
     }
   }
 </script>
@@ -158,9 +138,6 @@
     text-align: center;
   }
 
-  .social > div {
-  }
-
   .social > div > a {
     text-decoration: none !important;
     color: gray !important;
@@ -173,22 +150,6 @@
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: minmax(10px,auto);
     text-align: center;
-  }
-
-  .network {
-    font-weight: 400;
-    font-size: 1rem;
-  }
-  .network .circle {
-    display: inline-block;
-    width: 1rem;
-    height: 1rem;
-    background: green;
-    padding: .1rem .5rem;
-    border-radius: 1rem;
-  }
-  .network.offline .circle {
-    background: red;
   }
 
   @media(min-width: 700px) {
