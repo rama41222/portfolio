@@ -14,12 +14,12 @@
               </div>
               <div>
                 <div class="name-wrap">
-                  <p class="font-two" style="max-width: 100%">{{prof.name}}</p>
+                  <div class="font-two" style="max-width: 100%">{{prof.name}}</div>
                 </div>
               </div>
               <div>
                 <div class="">
-                  <p class="font-three">{{prof.who}}</p>
+                  <div class="font-three">{{prof.who}}</div>
                 </div>
               </div>
             </div>
@@ -34,10 +34,7 @@
         </div>
         <div class="works">
           <div class="menu-item" @click="showModal=true; selectedProject=project" v-for="(project, index) in projects"
-               :key="index"><img
-            :src="project.image"
-                                                                                        :class="project.class"
-                                                                                        :alt="project.alt"/>
+               :key="index"><img :src="project.image" :class="project.class" :alt="project.alt"/>
           </div>
 
         </div>

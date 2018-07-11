@@ -8,14 +8,16 @@ export default async function ({store}) {
     store.commit('setOnline', status)
   })
 
-  console.log('is Online')
+  console.log('is Online' + window.navigator.onLine)
 
   if (!window.navigator) {
-    store.state.isOnline = false
+    store.commit('setOnline', false)
     return
   }
+  
   const val = Boolean(window.navigator.onLine)
   store.commit('setOnline', { isOnline: val})
+  
   window.addEventListener('offline', function ({ type }) {
     let status = type === 'online'
     store.commit('setOnline',  status)

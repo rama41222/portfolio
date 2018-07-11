@@ -19,7 +19,7 @@ const state = () => ({
     who: 'a FullStack Engineer'
   },
   projects: [
-    {tech:'VueJS',contrib:'Contributed towards the development of the Official Web Portal of Maldives President',id: 11, name: 'Web Portal of Maldives President', description: 'presidency.gov.mv website ', url: 'http://presidency.gov.mv', alt:'Presidency Web', image: '/projects/mv.gif', class: 'img-project'},
+    {tech:'VueJS',contrib:'Contributed towards the development of the Official Web Portal of Maldives President',id: 15, name: 'Web Portal of Maldives President', description: 'presidency.gov.mv website ', url: 'http://presidency.gov.mv', alt:'Presidency Web', image: '/projects/mv.gif', class: 'img-project'},
     {tech:'NodeJS, VueJS',contrib:'Created the phase 2 of megarun RESTAPI. It contains features like Daily' +
       ' challenges.' +
       ' Also Improved' +
@@ -71,16 +71,17 @@ const state = () => ({
     ' upload tool that allows students to upload, record, and comment of their own and their peers video assignments. Instructors can upload and record videos, comment of videos, grade, and more. MediaShare helps promote a sense of community among students and faculty.', url: 'https://itunes.apple.com/us/app/pearson-mediashare/id584862581?mt=8', alt:'Mediashare', image: '/projects/media.png', class: 'img-project'},
     {tech:'NodeJS, NuxtJS', contrib : 'Created the Rest Services and a Dashboard to handle the creation of houses',id: 11, name: 'MVIVO' +
       ' Configurator', description: 'Interactive House Configurator', url: 'https://mvivo.arimac.digital', alt:'MVIVO', image: '/projects/mvivo.jpeg', class: 'img-project'},
-    {tech:'Swift 3.0', contrib : 'Created a custom component to replace the native iOS file sharing component',id: 11, name: 'iOS File' +
+    {tech:'Swift 3.0', contrib : 'Created a custom component to replace the native iOS file sharing component',id: 12, name: 'iOS File' +
       ' Sharing Component', description: ' A File Uploading and a sharing component' +
     ' for' +
     ' ios' +
       ' whichh offers more customizability than the native component', url: 'http://viyana.cloud', alt:'Cloud File' +
       ' Sharing Component', image: '/projects/driveplug.png', class: 'img-project'},
-    {tech:'NodeJS',contrib:'Creating the Web Services required for Rider Rush game',id: 11, name: 'Rider Rush Game Web Services', description: 'Guide your way through the top Honda bike' +
+    {tech:'NodeJS',contrib:'Creating the Web Services required for Rider Rush game',id: 13, name: 'Rider Rush Game' +
+      ' Web Services', description: 'Guide your way through the top Honda bike' +
 ' racer!' +
       ' Collect as many as time points in your time bank and be the best player among others! Unlock new bikes, new maps!', url: 'https://play.google.com/store/apps/details?id=com.hondasrilanka.riderrush', alt:'Rider Rush', image: '/projects/riderrush.jpg', class: 'img-project'},
-    {tech:'NuxtJs',contrib:'Creating a Singlish to Sinhala Transliterator',id: 11, name: 'Singlish', description: 'A Transliterator which convertes Singlish to Sinhala', url: 'http://viyana.cloud', alt:'Singlish', image: '/projects/singlish.png', class: 'img-project'},
+    {tech:'NuxtJs',contrib:'Creating a Singlish to Sinhala Transliterator',id: 14, name: 'Singlish', description: 'A Transliterator which convertes Singlish to Sinhala', url: 'http://viyana.cloud', alt:'Singlish', image: '/projects/singlish.png', class: 'img-project'},
   ],
   isOnline: true
   

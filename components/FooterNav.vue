@@ -8,17 +8,7 @@
 
 <script>
     export default {
-      data(){
-        return {
-          scrolled: false,
-        }
-      },
-      methods:{
-        isScrolling(evt) {
-          console.log(evt)
-          this.isScrolling = false
-        }
-      }
+
     }
 </script>
 
@@ -50,9 +40,5 @@
     color: #ff497d;
   }
 
-  .footer-down {
-    bottom: -40px !important;
-    transition: 0.4s;
-  }
 
 </style>

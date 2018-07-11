@@ -6,12 +6,10 @@
           <img class="img-modal-project" :src="project.image" :alt="project.alt"/>
         </div>
         <div>
-          <p><b>Tech: &nbsp;</b> {{project.tech}}</p>
+          <b>Tech: &nbsp;</b> {{project.tech}}
         </div>
         <div>
-          <p><b>Duration:&nbsp;</b>
-            <small>2017 - Present</small>
-          </p>
+          <b>Duration:&nbsp;</b><small>2017 - Present</small>
         </div>
       </div>
       <div class="nested-wrapper">
@@ -31,7 +29,10 @@
   export default {
     props: ['toggleModal', 'project'],
     data() {
-      return {}
+      return {
+        date: new Date()
+      }
+
     }
   }
 </script>
