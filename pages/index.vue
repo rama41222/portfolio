@@ -1,5 +1,8 @@
 <template>
   <div class="no-gutters container-wrap">
+    <div :class="['network',online ? 'online' : 'offline']">
+      <div v-if="!online" class="circle"></div>
+    </div>
     <div class="menu">
       <div class="wrapper">
         <div class="left-wrap">
@@ -56,15 +59,29 @@
         projects:'getProjects'
       })
     },
-    mounted() {
-
+    mounted () {
+      if (!window.navigator) {
+        this.online = false
+        return
+      }
+      this.online = Boolean(window.navigator.onLine)
+      window.addEventListener('offline', this._toggleNetworkStatus)
+      window.addEventListener('online', this._toggleNetworkStatus)
     },
     data() {
       return {
-        date: new Date()
+        online: true
       }
     },
-    methods: {}
+    methods: {
+      _toggleNetworkStatus ({ type }) {
+        this.online = type === 'online'
+      }
+    },
+    destroyed () {
+      window.removeEventListener('offline', this._toggleNetworkStatus)
+      window.removeEventListener('online', this._toggleNetworkStatus)
+    }
   }
 </script>
 
@@ -191,6 +208,22 @@
   .blogger {
     color: #f57d00;
     font-size: 1.3em;
+  }
+
+  .network {
+    font-weight: 400;
+    font-size: 1rem;
+  }
+  .network .circle {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background: green;
+    padding: .1rem .5rem;
+    border-radius: 1rem;
+  }
+  .network.offline .circle {
+    background: red;
   }
 
   @media(min-width: 700px) {

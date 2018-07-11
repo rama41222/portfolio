@@ -52,6 +52,7 @@ module.exports = {
     start_url: "/",
     lang: "en"
   },
+  offline: true,
   workbox: {
     runtimeCaching: [
       {
