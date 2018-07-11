@@ -51,7 +51,8 @@
   import {mapGetters} from 'vuex'
 
   export default {
-    components: {},
+    components: {
+    },
     computed: {
       ...mapGetters({
         socialLinks: 'getSocialLinks',
@@ -109,12 +110,12 @@
     grid-row-gap: 2em;
   }
 
-
   .short-title {
     display: grid;
     justify-items: center;
 
   }
+
   .works {
     left: 0;
     right: 0;
@@ -131,8 +132,8 @@
   }
 
   .img-project {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     object-fit: cover;
   }
 
@@ -155,6 +156,12 @@
   }
 
   .social > div {
+  }
+
+  .social > div > a {
+    text-decoration: none !important;
+    color: gray !important;
+    font-size: 1.3em;
     cursor: pointer;
   }
 
@@ -163,51 +170,6 @@
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: minmax(10px,auto);
     text-align: center;
-  }
-
-  .facebook {
-    color:#3b5998;
-    font-size: 1.3em;
-  }
-
-  .twitter {
-    color: #1da1f2;
-    font-size: 1.3em;
-
-  }
-
-  .ig {
-    color: #c32aa3;
-    font-size: 1.3em;
-
-  }
-
-  .linkedin {
-    color:#007bb5;
-    font-size: 1.3em;
-
-  }
-
-  .mail {
-    color: #db4437;
-    font-size: 1.3em;
-
-  }
-
-  .medium {
-    color: #12100e;
-    font-size: 1.3em;
-  }
-
-  .git {
-    color: #1c1c1c;
-    font-size: 1.3em;
-
-  }
-
-  .blogger {
-    color: #f57d00;
-    font-size: 1.3em;
   }
 
   .network {
@@ -262,6 +224,11 @@
 
     .works {
       text-align: left;
+    }
+
+    .img-project {
+      width: 150px;
+      height: 150px;
     }
 
   }

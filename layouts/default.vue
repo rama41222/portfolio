@@ -1,9 +1,19 @@
 <template>
-  <div class="home-background">
+  <div>
     <nuxt/>
+    <FooterNav/>
   </div>
 </template>
 
-<style type="scss">
 
+<script>
+import FooterNav from '../components/FooterNav'
+
+  export default  {
+    components:{
+      FooterNav
+    }
+  }
+</script>
+<style type="scss">
 </style>
