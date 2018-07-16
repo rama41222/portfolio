@@ -15,7 +15,7 @@ module.exports = {
       { name: 'og:title', content: "Rama\'s Personal Space" },
       { name: 'og:description', content: 'Rama&apos;s Personal Space' },
       { name: 'og:type', content: 'website' },
-      { name: 'og:url', content: 'http://dinushanka.me' },
+      { name: 'og:url', content: 'https://dinushanka.me' },
       { name: 'og:image', content: '/icon.png' },
     ],
     link: [
@@ -75,7 +75,7 @@ module.exports = {
     background_color: "#fcfcfc",
     display: "standalone",
     Scope: ".",
-    start_url: "http://dinushanka.me",
+    start_url: "https://dinushanka.me",
     lang: "en",
     icons: [
       {
@@ -139,7 +139,7 @@ module.exports = {
         
       },
       {
-        urlPattern: 'http://dinushanka.me/.*',
+        urlPattern: 'https://dinushanka.me/.*',
         handler: 'cacheFirst',
         method: 'GET',
         strategyOptions: {cacheableResponse: {statuses: [0, 200]}}
