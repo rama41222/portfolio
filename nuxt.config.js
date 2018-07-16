@@ -11,7 +11,12 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'Rama&apos;s Personal Space'},
       { hid: 'og-image', property: 'og-image', content: '/icon.png' },
       { name:'author', content:'Rama41222'},
-      { name:'apple-mobile-web-app-capable', content:'yes'}
+      { name:'apple-mobile-web-app-capable', content:'yes'},
+      { name: 'og:title', content: "Rama\'s Personal Space" },
+      { name: 'og:description', content: 'Rama&apos;s Personal Space' },
+      { name: 'og:type', content: 'website' },
+      { name: 'og:url', content: 'http://dinushanka.me' },
+      { name: 'og:image', content: '/icon.png' },
     ],
     link: [
       {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'},
@@ -57,6 +62,10 @@ module.exports = {
     'assets/css/style.scss',
     'assets/css/variables.scss'
   ],
+  cache: {
+    max: 1000,
+    maxAge: 900000
+  },
   loading: {color: '#3B8070'},
   plugins: ['~plugins/vee.js', '~plugins/spinner.js', {src:'~plugins/online.js', ssr: false }],
   manifest: {
@@ -64,9 +73,9 @@ module.exports = {
     short_name: "Rama",
     theme_color: "#fbfbfb",
     background_color: "#fcfcfc",
-    display: "fullscreen",
+    display: "standalone",
     Scope: ".",
-    start_url: "/",
+    start_url: "http://dinushanka.me",
     lang: "en",
     icons: [
       {
@@ -128,6 +137,20 @@ module.exports = {
         method: 'GET',
         strategyOptions: {cacheableResponse: {statuses: [0, 200]}}
         
+      },
+      {
+        urlPattern: 'http://dinushanka.me/.*',
+        handler: 'cacheFirst',
+        method: 'GET',
+        strategyOptions: {cacheableResponse: {statuses: [0, 200]}}
+    
+      },
+      {
+        urlPattern: '/.*',
+        handler: 'cacheFirst',
+        method: 'GET',
+        strategyOptions: {cacheableResponse: {statuses: [0, 200]}}
+    
       }
     ]
   },

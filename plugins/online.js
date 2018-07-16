@@ -3,13 +3,12 @@ export default async function ({store}) {
     let status = type === 'online'
     store.commit('setOnline', status)
   })
+  
   window.removeEventListener('online', function ({type}) {
     let status = type === 'online'
     store.commit('setOnline', status)
   })
-
-  console.log('is Online' + window.navigator.onLine)
-
+  
   if (!window.navigator) {
     store.commit('setOnline', false)
     return
@@ -22,6 +21,7 @@ export default async function ({store}) {
     let status = type === 'online'
     store.commit('setOnline',  status)
   })
+  
   window.addEventListener('online', function ({ type}) {
     let status = type === 'online'
     store.commit('setOnline',  status)

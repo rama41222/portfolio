@@ -25,7 +25,8 @@
             </div>
             <div class="social">
               <div v-for="(link, index) of socialLinks" :key="index">
-                <a  :rel="link.rel" :href="link.route" :target="link.target" :id="index" :title="link.title">
+                <a  :rel="link.rel" :href="link.route" :target="link.target" :alt="link.alt" :id="index"
+                    :title="link.title">
                   <i :class="link.class" :aria-labelledby="link.label" :area-label="link.label"></i>
                 </a>
               </div>
@@ -33,7 +34,8 @@
           </div>
         </div>
         <div class="works">
-          <div class="menu-item" @click="showModal=true; selectedProject=project" v-for="(project, index) in projects"
+          <div v-b-tooltip.hover :title="project.name" show="100" hide="400" class="menu-item" @click="showModal=true;
+          selectedProject=project" v-for="(project, index) in projects"
                :key="index"><img :src="project.image" :class="project.class" :alt="project.alt"/>
           </div>
 
@@ -41,7 +43,7 @@
       </div>
     </div>
 
-    <b-modal v-model="showModal" size="lg" hide-footer :title="selectedProject.name">
+    <b-modal v-model="showModal" size="lg" hide-footer :title="modalTitle">
         <project-modal-body :toggleModal="toggleModal" :project="selectedProject"></project-modal-body>
     </b-modal>
   </div>
@@ -66,7 +68,8 @@
     data() {
       return {
         showModal: false,
-        selectedProject: ''
+        modalTitle: 'Glimpse of my work',
+        selectedProject: ' '
       }
     },
     methods: {

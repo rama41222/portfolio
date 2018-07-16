@@ -1,16 +1,16 @@
 const state = () => ({
   socialLinks: [
     { title:'Facebook',label:"Facebook",route:'https://www.facebook.com/rama41222', class:'fab fa-facebook-f' +
-      ' facebook', target:'_blank', rel: 'external'},
-    { title:'Medium Blog',label:"Medium",route:'https://medium.com/@rama41222', class:'fab fa-medium-m medium', target:'_blank', rel: 'external'},
-    { title:'Blogspot ',label:"Blogspot",route:'https://rama41222.blogspot.com/', class:'fab fa-blogger-b blogger', target:'_blank', rel: 'external'},
+      ' facebook', target:'_blank', rel: 'external', alt:'Facebook'},
+    { title:'Medium Blog',label:"Medium",route:'https://medium.com/@rama41222', class:'fab fa-medium-m medium', target:'_blank', rel: 'external', alt:'Medium'},
+    { title:'Blogspot ',label:"Blogspot",route:'https://rama41222.blogspot.com/', class:'fab fa-blogger-b blogger', target:'_blank', rel: 'external', alt:'Blogger'},
     { title:'Linkedin Profile',label:"LinkedIn",route:'https://www.linkedin.com/in/dinushanka', class:'fab' +
-      ' fa-linkedin-in linkedin', target:'_blank', rel: 'external'},
-    { title:'Github account',label:"github",route:'https://github.com/rama41222', class:'fab fa-github git', target:'_blank', rel: 'external'},
+      ' fa-linkedin-in linkedin', target:'_blank', rel: 'external', alt:'linkedin'},
+    { title:'Github account',label:"github",route:'https://github.com/rama41222', class:'fab fa-github git', target:'_blank', rel: 'external',alt:'Github'},
     { title:'Mail me',label:"Mail Me",route:'mailto:dinushankanrg@gmail.com?Subject=Hello%20Rama', class:'far' +
-      ' fa-envelope-open mail', target:'_blank', rel: 'noopener'},
-    { title:'Twitter',label:"Twitter",route:'https://twitter.com/dnrg41222', class:'fab fa-twitter twitter', target:'_blank', rel: 'external'},
-    { title:'Instagram',label:"Instagram",route:'https://www.instagram.com/rama41222', class:'fab fa-instagram ig', target:'_blank', rel: 'external'},
+      ' fa-envelope-open mail', target:'_blank', rel: 'noopener', alt:'Email Me'},
+    { title:'Twitter',label:"Twitter",route:'https://twitter.com/dnrg41222', class:'fab fa-twitter twitter', target:'_blank', rel: 'external' ,alt:'Twitter'},
+    { title:'Instagram',label:"Instagram",route:'https://www.instagram.com/rama41222', class:'fab fa-instagram ig', target:'_blank', rel: 'external',alt:'Instagram'},
   ],
   generalInfo: {
     title: 'HELLO',
@@ -19,6 +19,10 @@ const state = () => ({
     who: 'a FullStack Engineer'
   },
   projects: [
+    {tech:'NodeJs, Nuxt JS, Socket IO, Vert.x, Kubernetes, Docker',contrib:'CTO of aAdz',id: 16, name: 'gAdz', description: 'Next' +
+      ' Generation In Game' +
+      ' Advertising' +
+      ' platform focused on Indi Gamers', url: 'http://gadz.ga', alt:'gAdz', image: '/projects/logo.png', class: 'img-project'},
     {tech:'VueJS',contrib:'Contributed towards the development of the Official Web Portal of Maldives President',id: 15, name: 'Web Portal of Maldives President', description: 'presidency.gov.mv website ', url: 'http://presidency.gov.mv', alt:'Presidency Web', image: '/projects/mv.gif', class: 'img-project'},
     {tech:'NodeJS, VueJS',contrib:'Created the phase 2 of megarun RESTAPI. It contains features like Daily' +
       ' challenges.' +
@@ -55,7 +59,9 @@ const state = () => ({
       ' researchers, I' +
       ' contributed to the automatic writing review feature in the app. The automatic writing review feature' +
       ' (available on the tablet and desktop apps) helps you check your paper for possible spelling, grammar, and style errors, while offering grammar lessons and suggestions for revising and editing.\n', url: 'https://itunes.apple.com/lk/app/pearson-writer/id590366644?mt=8', alt:'Pearson Writer', image: '/projects/writer.jpg', class: 'img-project'},
-    {tech:'NodeJS',contrib : 'Architectured the Cloud computing platform and created all necessary backend' +
+    {tech:'NodeJS',contrib : 'I\'m the CEO of Viyana. Architectured the Cloud computing platform and created all' +
+      ' necessary' +
+      ' backend' +
       ' services',id: 8, name: 'Viyana', description: 'Cloud Computing Platform', url: 'http://viyana.cloud', alt:'Viyana', image: '/projects/viyana.jpg', class: 'img-project'},
     {tech:'AngularJS 1.0',contrib : 'Created an angular 1.0 based module and an API using nodejs to handle' +
       ' transactions',id: 9, name: 'SLIIT HIS Pharmacy Module', description: 'Pharmacy is the science' +
@@ -81,7 +87,7 @@ const state = () => ({
       ' Web Services', description: 'Guide your way through the top Honda bike' +
 ' racer!' +
       ' Collect as many as time points in your time bank and be the best player among others! Unlock new bikes, new maps!', url: 'https://play.google.com/store/apps/details?id=com.hondasrilanka.riderrush', alt:'Rider Rush', image: '/projects/riderrush.jpg', class: 'img-project'},
-    {tech:'NuxtJs',contrib:'Creating a Singlish to Sinhala Transliterator',id: 14, name: 'Singlish', description: 'A Transliterator which convertes Singlish to Sinhala', url: 'http://viyana.cloud', alt:'Singlish', image: '/projects/singlish.png', class: 'img-project'},
+    {tech:'NuxtJs',contrib:'Creating a Singlish to Sinhala Transliterator',id: 14, name: 'Singlish', description: 'A Transliterator which convertes Singlish to Sinhala', url: 'http://singlish.lk', alt:'Singlish', image: '/projects/singlish.png', class: 'img-project'},
   ],
   isOnline: true
   

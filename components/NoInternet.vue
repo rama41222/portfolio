@@ -48,7 +48,7 @@
     width:100%;
     color: #fff;
     font-weight: bolder;
-    font-size: 2em;
+    font-size: 1.5em;
     transition: 0.7s;
   }
 
