@@ -13,10 +13,9 @@
         </div>
       </div>
       <div class="nested-wrapper">
-        <div><b>Project: &nbsp;</b>&nbsp;{{project.name}}</div>
-        <div><b>Contribution: &nbsp;</b>&nbsp;{{project.contrib}}</div>
-        <div><b>Description: &nbsp;</b>&nbsp;{{project.description}}</div>
-        <div><b>Link: &nbsp;</b>&nbsp;<a :href="project.url" :alt="project.alt" target="_blank">Try</a></div>
+        <div><b>Project:</b>&nbsp;{{project.name}}</div>
+        <div><b>Description:</b>&nbsp;{{project.description}}</div>
+        <div><b>Link:</b>&nbsp;<a :href="project.url" :alt="project.alt" target="_blank">Try</a></div>
       </div>
     </div>
     <div align="right">

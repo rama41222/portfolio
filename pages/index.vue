@@ -34,12 +34,11 @@
           </div>
         </div>
         <div class="works">
-          <div v-b-tooltip.hover :title="project.name" show="100" hide="400" class="menu-item" @click="showModal=true;
+            <div :title="project.name" class="menu-item" @click="showModal=true;
           selectedProject=project" v-for="(project, index) in projects"
-               :key="index"><img :src="project.image" :class="project.class" :alt="project.alt"/>
+                 :key="index"><img :src="project.image" :class="project.class" :alt="project.alt"/>
+            </div>
           </div>
-
-        </div>
       </div>
     </div>
 
@@ -201,12 +200,12 @@
     }
 
     .works {
-      text-align: center;
+      text-align: left;
     }
 
     .img-project {
       width: 150px;
-      height: 150px;
+      height:150px;
     }
 
   }
