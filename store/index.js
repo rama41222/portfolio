@@ -27,7 +27,8 @@ const state = () => ({
       ' Writer Review Component', description: 'An iOS application for' +
       ' researchers, I' +
       ' contributed to the automatic writing review feature in the app. The automatic writing review feature' +
-      ' (available on the tablet and desktop apps) helps you check your paper for possible spelling, grammar, and style errors, while offering grammar lessons and suggestions for revising and editing.\n', url: 'https://itunes.apple.com/lk/app/pearson-writer/id590366644?mt=8', alt:'Pearson Writer', image: '/projects/writer.jpg', class: 'img-project'},
+      ' (available on the tablet and desktop apps) helps you check your paper for possible spelling, grammar, and' +
+      ' style errors, while offering grammar lessons and suggestions for revising and editing.\n', url: 'https://itunes.apple.com/lk/app/pearson-writer/id590366644?mt=8', alt:'Pearson Writer', image: '/projects/writer.png', class: 'img-project'},
     {tech:'NodeJS',contrib : 'Architectured the Cloud computing platform and created all' +
       ' necessary' +
       ' backend' +
@@ -37,7 +38,9 @@ const state = () => ({
       ' Handling', description: 'The' +
       ' MediaShare app is a' +
       ' video' +
-    ' upload tool that allows students to upload, record, and comment of their own and their peers video assignments. Instructors can upload and record videos, comment of videos, grade, and more. MediaShare helps promote a sense of community among students and faculty.', url: 'https://itunes.apple.com/us/app/pearson-mediashare/id584862581?mt=8', alt:'Mediashare', image: '/projects/media.png', class: 'img-project'},
+    ' upload tool that allows students to upload, record, and comment of their own and their peers video' +
+      ' assignments. Instructors can upload and record videos, comment of videos, grade, and more. MediaShare helps' +
+      ' promote a sense of community among students and faculty.', url: 'https://itunes.apple.com/us/app/pearson-mediashare/id584862581?mt=8', alt:'Mediashare', image: '/projects/media.png', class: 'img-project'},
     {tech:'Swift 3.0', contrib : 'Created a custom component to replace the native iOS file sharing component',id: 12, name: 'iOS File' +
       ' Sharing Component', description: ' A File Uploading and a sharing component' +
     ' for' +
